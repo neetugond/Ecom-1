@@ -5,14 +5,14 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { Link } from 'react-router-dom'
-
-import axios from 'axios';
+import axios from 'axios'
 
 
 
 export default function PaymentForm() {
   // const [users, setUsers] = useState([])
   const [obj, setObj] = useState({})
+  console.log('obj:', obj)
 
 
   const loadUsers = () => {
@@ -42,7 +42,7 @@ export default function PaymentForm() {
             // users.map((user, index) => (
             <tr>
               {/* <th scope='row'>{index + 1}</th> */}
-              <td>{obj.firstname}</td>
+              <td>{obj.firstname} { obj.lastname}</td>
               <td>{obj.email}</td>
               <td>{obj.phone}</td>
               <td>{obj.address}</td>
