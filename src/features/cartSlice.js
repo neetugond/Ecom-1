@@ -19,7 +19,7 @@ const cartSlice = createSlice({
                 // greater than 0 that means item is already in cart increment by +1
                 state.cartItems[itemIndex].cartQuantity += 1;//increment
 
-                toast.dark(`increased ${state.cartItems[itemIndex].title} cart quantity`, {
+                toast.success(`increased ${state.cartItems[itemIndex].title} cart quantity`, {
                    position:"bottom-left",
                })
             } else {
@@ -38,7 +38,7 @@ const cartSlice = createSlice({
             );
             state.cartItems = nextCartItems
             localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
-            toast.dark(`${action.payload.title} remove from cart`, {
+            toast.error(`${action.payload.title} remove from cart`, {
                 position:"bottom-left",
             })
         },
@@ -51,7 +51,7 @@ const cartSlice = createSlice({
             if (state.cartItems[itemIndex].cartQuantity > 1) {
                 state.cartItems[itemIndex].cartQuantity -= 1
 
-                toast.dark(`Decreased ${action.payload.title} cart quantity`, {
+                toast.info(`Decreased ${action.payload.title} cart quantity`, {
                     position:"bottom-left",
                 })
                 
@@ -72,7 +72,7 @@ const cartSlice = createSlice({
         
         clearCart(state, action) {
             state.cartItems = [];
-            toast.dark('Cart cleared', {
+            toast.error('Cart cleared', {
                 position: "bottom-left",
             });
             localStorage.setItem("cartItems", JSON.stringify(state.cartItems))

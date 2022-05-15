@@ -23,7 +23,7 @@ const CartBtn = () => {
       <div>
           <NavLink to="/cart" >
               <ShoppingBagOutlinedIcon sx={{color: "white"}} />
-              <span className='cart-nav-count'>0</span>
+          <span className='cart-nav-count'>0</span>
                 </NavLink>
     </div>
   )

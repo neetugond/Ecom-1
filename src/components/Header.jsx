@@ -58,7 +58,8 @@ const Header = () => {
                    <Tab label="Support" />
                  </Tabs>
                 <SearchIcon />
-                <CartBtn/>
+                <ShoppingBagOutlinedIcon />
+                <span>{cartTotalQuantity }</span>
               
                
               </>
