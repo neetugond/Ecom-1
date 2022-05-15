@@ -70,7 +70,7 @@ const Checkout = () => {
     e.preventDefault();
     setError(validate(checkoutInput));
     setIsSubmit(true)
-    axios.post('http://localhost:8080/users', checkoutInput).then(() => {
+    axios.post('https://neetuapi.herokuapp.com/ecommerce/users', checkoutInput).then(() => {
       console.log("Data Inserted")
     })
     // navigate('/payment')

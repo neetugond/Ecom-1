@@ -20,7 +20,7 @@ const ProductDetail = () => {
   }, [])
   // console.log(arr)
   function getarr() {
-    axios.get(`http://localhost:8080/data/${id}`).then((({data}) => {
+    axios.get(`https://neetuapi.herokuapp.com/ecommerce/data/${id}`).then((({data}) => {
       setArr(data)
     })
     )

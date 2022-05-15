@@ -8,7 +8,7 @@ const initialState ={
 
 export const productsFetch = createAsyncThunk(
     "products/productsFetch", async () => {
-        const response = await axios.get("http://localhost:8080/data/products")
+        const response = await axios.get("https://neetuapi.herokuapp.com/ecommerce/data/products")
         return response?.data;
     }
 );

@@ -16,7 +16,7 @@ export default function PaymentForm() {
 
 
   const loadUsers = () => {
-    axios.get('http://localhost:8080/users').then(({ data }) =>
+    axios.get('https://neetuapi.herokuapp.com/ecommerce/users').then(({ data }) =>
       setObj(data[data.length - 1])
     )
   }
